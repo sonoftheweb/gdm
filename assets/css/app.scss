@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* assets/styles/global.css */
+@font-face {
+  font-family: 'Manrope';  /* Choose a font-family name */
+  src: url('/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body {
+  @apply bg-zinc-600 text-white text-[12px];
+  font-family: 'Manrope', sans-serif;
+}
+
+a {
+  @apply text-gray-600 underline underline-offset-8;
+  text-decoration-style: dashed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-medium mb-4;
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h4 {
+  @apply text-[14px] text-zinc-600;
+}
+
+.header {
+  @apply w-full bg-black fixed top-0 left-0 md:static;
+
+  &__content {
+    @apply max-w-[1024px] mx-auto h-[64px] flex justify-between items-center;
+  }
+
+  &__menu-icon-wrapper {
+    @apply w-[64px] h-[64px] bg-[#161616] flex items-center justify-center;
+  }
+
+  &__menu-box {
+    @apply cursor-pointer;
+  }
+
+  &__menu-logo {
+    @apply h-[25px] w-auto;
+  }
+}
+
+.main {
+  @apply bg-black max-w-[1024px] mx-auto;
+}
+
+.page {
+  @apply w-full bg-black pt-16 md:pt-10 pb-16;
+
+  &--padded {
+    @apply px-3 py-16;
+  }
+}
+
+.player-table {
+  @apply w-full;
+}
+
+.stat-box {
+  @apply w-[46px] mx-auto text-center py-1 rounded;
+
+  &--light {
+    @apply text-black bg-white;
+  }
+
+  &--dark {
+    @apply text-white bg-black;
+  }
+
+  &--dark-outlined {
+    @apply text-white bg-black border border-white;
+  }
+}
+
+.stats {
+  @apply text-[10px] flex-grow flex justify-between;
+}
+
